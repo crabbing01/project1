@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>Home</title>
+</head>
+
+<body>
+
+  <button type="button" id = "button" onclick="location.href='/addPlayer';">Click to Enter Player! </button> <br> 
+
+  <h4>Search for a Player's Name:  <input type="search" id="players" maxLength = "100" onkeyup="check()"> <br> 
+  <button type="button" id = "player">Click to Search Player!</button></h4> <br>
+
+<h2> MLB PLAYERS </h2>
+{{#each data}}
+<article>
+	<hr>
+	<h4> {{this.name}} </h4>
+	<b>Position:</b> {{this.position}} <br>
+	<b>All-Star:</b> {{this.all_star}} <br>
+	<b>Contract:</b> {{this.contract}} million <br>
+	<b>Batting Avg:</b> {{this.batting_average}} <br>
+	<b>Teams Played On:</b> {{this.teams_played_for}} <br>
+	<hr>
+</article>
+{{/each}}
+
+</body>
+</html>
